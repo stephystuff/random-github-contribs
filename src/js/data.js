@@ -16,21 +16,23 @@
         }
 
       })
-      .done(function handleSuccess(data){
+      .then(function handleSuccess(data){
         console.log(data, 'hey');
-      })
-      .fail(function handleFail(data, xhr){
-        console.log(xhr, 'nope');
+
+      var randomRepo = data.items[Math.ceil(Math.random()*29)];
+      console.log(randomRepo);
+      var url = randomRepo.commits_url;
+
       });
   }
 
   function getCommits(){
     $.ajax({
-      url: 'https://api.github.com/repos/imee12/Yorkiepoos/commits',
+      url: 'https://api.github.com/repos/:username/:reponame/commits',
       method:'GET',
       dataType: 'json',
-      headers:
-    })
+      headers: {}
+    });
   }
 
 
