@@ -1,0 +1,19 @@
+{
+  "name": "random-github-contribs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephystuff/random-github-contribs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephystuff/random-github-contribs/issues"
+  },
+  "homepage": "https://github.com/stephystuff/random-github-contribs#readme"
+}
