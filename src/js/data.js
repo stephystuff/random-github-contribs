@@ -26,12 +26,16 @@
       });
   }
 
-  function getCommits(){
+  function getCommits(randomRepo){
     $.ajax({
-      url: 'https://api.github.com/repos/:username/:reponame/commits',
+      url: 'https://api.github.com/repos/' + randomRepo.owner.login + randomRepo.name +'/commits',
       method:'GET',
-      dataType: 'json',
-      headers: {}
+      dataType: 'json'
+    })
+
+    .then(function handleSuccess(data){
+        console.log(data, 'hey');
+
     });
   }
 
